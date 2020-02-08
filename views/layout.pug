@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title=title
+
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css")
+    link(rel="stylesheet" href="/stylesheets/style.css")
+
+
+  //-AGREGUE ESTO
+  style.
+    body {
+    background: #000080;
+    }
+  //-HASTA AQUI
+
+  body
+
+    nav.uk-navbar-container(uk-navbar='')
+      .uk-navbar-left
+        ul.uk-navbar-nav
+          if user 
+            li
+              a(href='#')=user.username
+              .uk-navbar-dropdown
+                ul.uk-nav.uk-navbar-dropdown-nav
+                  li
+                    a(href='/logout') Salir
+          else 
+            li.uk-active
+                 a(href='/signup') Registro
+                 //-CAMBIE ESTA PALABRA
+            li.uk-active
+                 a(href='/login') Entrar
+
+      .uk-navbar-right
+        ul.uk-navbar-nav
+          li
+            a(href='#') Uso
+            .uk-navbar-dropdown
+              ul.uk-nav.uk-navbar-dropdown-nav
+                li.uk-active
+                  a(href='#') Para encontrar tu antojo
+                li
+                  a(href='/home') Busca Comidita
+                li.uk-nav-header Sobre heywero
+                li
+                  a(href='queEsHeyWero') Qué es heywero
+                li
+                  a(href='comoUsarHeyWero') Cómo usar heywero
+                li.uk-nav-divider
+                li
+                  a(href='tecnologiasHeyWero') Tecnologías heywero
+
+
+    block content
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js")
+    //-script(src="/javascripts/script.js")

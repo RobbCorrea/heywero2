@@ -1,0 +1,44 @@
+form(action='/puesto/new' method='post')
+  label(for='') Nombre:
+  input(type='text' name='name')
+  label(for='') Platillo principal:
+  input(type='text' name='mainDish')
+  label(for='') Hora de Apertura:
+  input(type='time' name='openingTime')
+  label(for='') Hora de Cierre:
+  input(type='time' name='closingTime')
+  label(for='') Precio Promedio:
+  input(type='number' min='0' max='100' step="any" name='averagePrice')
+  label(for='') D&iacute;as que abre:
+  label
+    input(type='checkbox' name='diaBox1')
+    | Lunes
+  label
+    input(type='checkbox' name='diaBox2')
+    | Martes
+  label
+    input(type='checkbox' name='diaBox3')
+    | Mi&eacute;rcoles
+  label
+    input(type='checkbox' name='diaBox4')
+    | Jueves
+  label
+    input(type='checkbox' name='diaBox5')
+    | Viernes
+  label
+    input(type='checkbox' name='diaBox6')
+    | S&aacute;bado
+  label
+    input(type='checkbox' name='diaBox7')
+    | Domingo
+  label(for='') Direcci&oacute;n:
+  input(type='text' name='address')
+  label(for='') Descripci&oacute;n:
+  input(type='text' name='description')
+  label(for='') Latitud:
+  input(type='number' step="any" name='lat')
+  label(for='') Longitud:
+  input(type='number' step="any" name='lng')
+  label(for='') Imagen:
+  input(type='file' name='image')
+  button(type='submit') A&ntilde;adir
